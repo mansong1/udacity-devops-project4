@@ -19,6 +19,6 @@ EXPOSE 80
 ## Step 5:
 # Run app.py at container launch
 #CMD env FLASK_APP=app.py FLASK_ENV=development flask run --host=0.0.0.0
-CMD python app.py
+CMD ["python", "app.py"]
 #CMD ["env","FLASK_APP=app.py","FLASK_ENV=development","flask","run","--host=0.0.0.0"]
 
