@@ -37,13 +37,16 @@ After running `./run_docker.sh`, execute script`./upload_docker.sh` to upload im
 
 ## Project Files
 
-* __app.py:__ 
-* __requirements.txt:__ 
-* __Dockerfile:__ 
-* __Makefile:__ 
-* __output_txt_files/docker_out.txt:__ 
-* __run_docker.sh:__ 
-* __run_kubernetes.sh:__ 
-* __upload_docker.sh:__ 
-* __.circleci/config.yml:__ 
+* __app.py:__ The Flask API 
+* __requirements.txt:__ Prerequisites of Python packages for Flask API to run
+* __model_data/boston_housing_prediction.joblib:__ Pretrained sklearn model for the API
+* __Dockerfile:__ Defines the container in which the API runs
+* __Makefile:__ Commands to install and lint the applicaiton
+* __run_docker.sh:__ Runs the API in a Docker container (defined by Dockerfile)
+* __run_kubernetes.sh:__ Runs the API as a Kubernetes deployment
+* __make_prediction.sh:__ When the applicaiton is running, this script can be run to make a call to the API and generate a prediciton
+* __upload_docker.sh:__ Tags and uploads the Docker image to DockerHub
+* __output_txt_files/docker_out.txt:__ Console output from running run_docker.sh and make_prediction.sh
+* __output_txt_files/kubernetes_out.txt__ Console output from running run_kubernetes.sh and make_prediction.sh
+* __.circleci/config.yml:__ Defines the circleCI deployment
 
