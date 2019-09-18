@@ -1,1 +1,56 @@
-<paste log output from Docker prediction, here>
+joseph@joseph-ThinkPad-T420:~/Documents/projects/UdacityDevOps/Project4/submission$ ./run_docker.sh 
+Sending build context to Docker daemon  1.126MB
+Step 1/9 : FROM python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/9 : WORKDIR /app
+ ---> Using cache
+ ---> c5cde7fda758
+Step 3/9 : COPY app.py /app/
+ ---> Using cache
+ ---> 2d3acb5e210b
+Step 4/9 : COPY requirements.txt /app/
+ ---> Using cache
+ ---> f422116daffc
+Step 5/9 : COPY model_data/boston_housing_prediction.joblib /app/model_data/
+ ---> Using cache
+ ---> 3b1f757deaaf
+Step 6/9 : RUN pip install --upgrade pip &&    pip install --trusted-host pypi.python.org -r requirements.txt
+ ---> Using cache
+ ---> 0230dbc5abe5
+Step 7/9 : EXPOSE 80
+ ---> Using cache
+ ---> 6fd4cc0788b7
+Step 8/9 : CMD ["python", "app.py"]
+ ---> Using cache
+ ---> d820b240e01b
+Step 9/9 : LABEL sklearnapp=
+ ---> Using cache
+ ---> 5bff4be7171a
+Successfully built 5bff4be7171a
+Successfully tagged sklearnapp:latest
+REPOSITORY                                       TAG                 IMAGE ID            CREATED             SIZE
+sklearnapp                                       latest              5bff4be7171a        16 minutes ago      1.26GB
+josephmfaulkner/udacitydevops-project4-sklearn   sklearnapp          b0fb144255ed        2 days ago          1.26GB
+Application Started
+[2019-09-18 01:39:38,609] INFO in app: Application Started
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+Application Started
+[2019-09-18 01:39:41,418] INFO in app: Application Started
+ * Debugger is active!
+ * Debugger PIN: 236-198-589
+[2019-09-18 01:39:55,046] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2019-09-18 01:39:55,222] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2019-09-18 01:39:55,243] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2019-09-18 01:39:55,248] INFO in app: PREDICTION: [20.35373177134412]
+172.17.0.1 - - [18/Sep/2019 01:39:55] "POST /predict HTTP/1.1" 200 -

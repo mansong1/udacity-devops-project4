@@ -1,1 +1,6 @@
-<paste log output from Kubernetes-mediated prediction, here>
+joseph@joseph-ThinkPad-T420:~/Documents/projects/UdacityDevOps/Project4/submission$ ./run_kubernetes.sh 
+NAME         READY   STATUS    RESTARTS   AGE
+sklearnapp   1/1     Running   0          2d1h
+Forwarding from 127.0.0.1:5000 -> 5000
+Forwarding from [::1]:5000 -> 5000
+Handling connection for 5000

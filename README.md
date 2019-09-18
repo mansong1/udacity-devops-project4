@@ -28,14 +28,28 @@ The application will be running on http://localhost:5000
 
 ### Predict housing prices
 
-`./make_predicion.sh`
+While the application is running, run `./make_predicion.sh` to make calls to the API
 
 ### Upload Docker image to DockerHub
-`./upload_docker.sh`
+After running `./run_docker.sh`, execute script`./upload_docker.sh` to upload image to DockerHub
 
 ---
 
 ## Project Files
+
+* __ app.py: __ 
+* __ requirements.txt: __ 
+* __ Dockerfile: __ 
+* __ Makefile: __ 
+* __ output_txt_files/docker_out.txt: __ 
+* __ run_docker.sh: __ 
+* __ run_kubernetes.sh: __ 
+* __ upload_docker.sh: __ 
+* __ .circleci/config.yml: __ 
+
+
+
+
 
 * Setup and Configure Docker locally
 * Setup and Configure Kubernetes locally
