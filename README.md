@@ -37,21 +37,13 @@ After running `./run_docker.sh`, execute script`./upload_docker.sh` to upload im
 
 ## Project Files
 
-* __ app.py: __ 
-* __ requirements.txt: __ 
-* __ Dockerfile: __ 
-* __ Makefile: __ 
-* __ output_txt_files/docker_out.txt: __ 
-* __ run_docker.sh: __ 
-* __ run_kubernetes.sh: __ 
-* __ upload_docker.sh: __ 
-* __ .circleci/config.yml: __ 
+* __app.py:__ 
+* __requirements.txt:__ 
+* __Dockerfile:__ 
+* __Makefile:__ 
+* __output_txt_files/docker_out.txt:__ 
+* __run_docker.sh:__ 
+* __run_kubernetes.sh:__ 
+* __upload_docker.sh:__ 
+* __.circleci/config.yml:__ 
 
-
-
-
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
